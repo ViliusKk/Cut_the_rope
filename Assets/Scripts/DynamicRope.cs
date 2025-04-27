@@ -1,16 +1,29 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class DynamicRope : MonoBehaviour
 {
-    public Transform pin;
     public Transform candy;
-    public GameObject rope;
+    public GameObject ropeJoint;
+    public float offset = 0.2f;
+
+    public List<Transform> joints = new();
     void Start()
     {
-        float distance = Vector2.Distance(pin.position, candy.position);
-    }
-    void Update()
-    {
-        //GameObject ropeObj = Instantiate(rope, 0, Quaternion.identity);
+        int jointCount = (int)(Vector3.Distance(transform.position, candy.position) / offset);
+        
+        Vector3 pos = transform.position;
+
+        for (int i = 0; i < jointCount; i++)
+        {
+            GameObject joint = Instantiate(ropeJoint, pos, Quaternion.identity);
+            pos = Vector3.Lerp(transform.position, candy.position, (float)i / jointCount);
+            
+            if(i == 0) joint.GetComponent<Joint2D>().connectedBody = GetComponent<Rigidbody2D>();
+            else joint.GetComponent<Joint2D>().connectedBody = joints[joints.Count - 1].GetComponent<Rigidbody2D>();
+            
+            joints.Add(joint.transform);
+        }
+        candy.GetComponent<Joint2D>().connectedBody = joints[jointCount-1].GetComponent<Rigidbody2D>();
     }
 }
