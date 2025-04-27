@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class DynamicRope : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class DynamicRope : MonoBehaviour
             
             joints.Add(joint.transform);
         }
-        candy.GetComponent<Joint2D>().connectedBody = joints[jointCount-1].GetComponent<Rigidbody2D>();
+        //candy.GetComponent<Joint2D>().connectedBody = joints[jointCount-1].GetComponent<Rigidbody2D>();
+        Joint2D candyJoint = candy.AddComponent<HingeJoint2D>();
+        candyJoint.connectedBody = joints[^1].GetComponent<Rigidbody2D>();
     }
 }
