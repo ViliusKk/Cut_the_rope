@@ -9,7 +9,7 @@ public class TouchController : MonoBehaviour
     private bool mouseDown;
     void Start()
     {
-        cursor.gameObject.SetActive(true);
+        cursor.gameObject.SetActive(false);
     }
 
     void Update()

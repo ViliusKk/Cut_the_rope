@@ -863,6 +863,7 @@ GameObject:
   - component: {fileID: 1618770305}
   - component: {fileID: 1618770307}
   - component: {fileID: 1618770306}
+  - component: {fileID: 1618770308}
   m_Layer: 0
   m_Name: Cursor
   m_TagString: Untagged
@@ -1042,6 +1043,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.2
+--- !u!114 &1618770308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618770304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb60f224186fd46fbabb74e7c102b2f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1765050354
 GameObject:
   m_ObjectHideFlags: 0
