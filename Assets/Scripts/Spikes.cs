@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class Spikes : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (collision.gameObject.CompareTag("Candy"))
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }
