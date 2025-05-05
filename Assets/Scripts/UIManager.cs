@@ -9,7 +9,9 @@ public class UIManager : MonoBehaviour
     public static UIManager instance;
 
     public Image[] stars;
+    public Image[] endStars;
     public Sprite starOn;
+    public GameObject endLevelScreen;
     
     private int index = 0;
 
@@ -17,6 +19,8 @@ public class UIManager : MonoBehaviour
     {
         if(instance == null) instance = this;
         else gameObject.SetActive(false);
+        
+        endLevelScreen.SetActive(false);
     }
 
     public void RestartGame()
@@ -27,5 +31,16 @@ public class UIManager : MonoBehaviour
     public void AddStar()
     {
         stars[index++].sprite = starOn;
+        endStars[index].sprite = starOn;
+    }
+
+    public void OpenNextLevelScreen()
+    {
+        endLevelScreen.SetActive(true);
+    }
+
+    public void OpenNextLevel(string levelName)
+    {
+        SceneManager.LoadScene(levelName);
     }
 }

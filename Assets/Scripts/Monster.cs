@@ -9,6 +9,8 @@ public class Monster : MonoBehaviour
         if (collision.gameObject.CompareTag("Candy"))
         {
             Destroy(collision.gameObject);
+            
+            UIManager.instance.OpenNextLevelScreen();
         }
     }
 }
