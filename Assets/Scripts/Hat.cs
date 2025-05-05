@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class Hat : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Transform hatOut;
 
-    // Update is called once per frame
-    void Update()
+
+    void OnTriggerEnter2D(Collider2D other)
     {
-        
+        other.transform.position = hatOut.position;
     }
 }
