@@ -19,7 +19,7 @@ public class Bubble : MonoBehaviour
         else if (other.gameObject.CompareTag("Cursor") && candy != null)
         {
             candy.gravityScale = 1;
-            Destroy(other.gameObject);
+            Destroy(gameObject);
         }
     }
 }
