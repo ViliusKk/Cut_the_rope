@@ -30,8 +30,8 @@ public class UIManager : MonoBehaviour
 
     public void AddStar()
     {
-        stars[index++].sprite = starOn;
         endStars[index].sprite = starOn;
+        stars[index++].sprite = starOn;
     }
 
     public void OpenNextLevelScreen()
