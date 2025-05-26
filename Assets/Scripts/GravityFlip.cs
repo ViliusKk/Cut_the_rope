@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GravityFlip : MonoBehaviour
 {
-    public bool revert = true;
+    public bool revertGravity = true;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -20,7 +20,7 @@ public class GravityFlip : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (revert && other.CompareTag("Candy"))
+        if (revertGravity && other.CompareTag("Candy"))
         {
             Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
             if (rb != null)
