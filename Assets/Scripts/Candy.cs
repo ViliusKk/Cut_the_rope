@@ -3,7 +3,7 @@ using UnityEngine;
 public class Candy : MonoBehaviour
 {
     public AudioSource spikesfx;
-    public AudioSource starsfx;
+    //public AudioSource starsfx;
     public GameObject candyVFX;
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,9 +17,9 @@ public class Candy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Spikes"))
         {
+            spikesfx.Play();
             Instantiate(candyVFX, transform.position, Quaternion.identity);
             Destroy(gameObject);
-            spikesfx.Play();
         }
     }
 }
