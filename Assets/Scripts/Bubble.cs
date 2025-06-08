@@ -27,7 +27,13 @@ public class Bubble : MonoBehaviour
         {
             sfx.Play();
             candy.gravityScale = 1;
-            Destroy(gameObject);
+            StartCoroutine(DestroyAfterSound());
         }
+    }
+    
+    IEnumerator DestroyAfterSound()
+    {
+        yield return new WaitForSeconds(0.02f);
+        Destroy(gameObject);
     }
 }
