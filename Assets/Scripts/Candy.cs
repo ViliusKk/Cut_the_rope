@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Candy : MonoBehaviour
@@ -19,7 +20,13 @@ public class Candy : MonoBehaviour
         {
             spikesfx.Play();
             Instantiate(candyVFX, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            StartCoroutine(DestroyAfterSound());
         }
+    }
+    
+    IEnumerator DestroyAfterSound()
+    {
+        yield return new WaitForSeconds(0.4f);
+        Destroy(gameObject);
     }
 }
