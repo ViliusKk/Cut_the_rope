@@ -4,14 +4,22 @@ using UnityEngine;
 public class Candy : MonoBehaviour
 {
     public AudioSource spikesfx;
-    //public AudioSource starsfx;
+    public AudioSource[] starsfx;
     public GameObject candyVFX;
+    private int count = 0;
     void OnTriggerEnter2D(Collider2D collision)
     {
+        var destroy = collision.gameObject;
         if (collision.gameObject.CompareTag("Star"))
         {
-            Destroy(collision.gameObject);
+            starsfx[count].Play();
+            Star starScript = collision.GetComponent<Star>();
+            if (starScript != null)
+            {
+                starScript.CollectAndDestroy(0.01f);
+            }
             UIManager.instance.AddStar();
+            count++;
         }
     }
     void OnCollisionEnter2D(Collision2D collision)
@@ -26,7 +34,7 @@ public class Candy : MonoBehaviour
     
     IEnumerator DestroyAfterSound()
     {
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.1f);
         Destroy(gameObject);
     }
 }

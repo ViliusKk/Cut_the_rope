@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3959584151249291841}
   - component: {fileID: 2122108766533038199}
   - component: {fileID: 3389048825836502865}
+  - component: {fileID: 5321585656145680358}
   m_Layer: 0
   m_Name: star_glow
   m_TagString: Star
@@ -120,3 +121,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.3
+--- !u!114 &5321585656145680358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3393305611563639142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5be2689a04c4ef5a938f3d33da372f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
