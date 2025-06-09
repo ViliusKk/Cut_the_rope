@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class Cursor : MonoBehaviour
 {
-    public AudioSource[] sfx;
+    public AudioSource[] ropeSfx;
     void OnCollisionEnter2D(Collision2D collision)
     {
         Joint2D joint = collision.gameObject.GetComponent<Joint2D>();
         if (joint != null)
         {
-            sfx[Random.Range(0, sfx.Length)].Play();
+            ropeSfx[Random.Range(0, ropeSfx.Length)].Play();
             StartCoroutine(DestroyAfterSound(joint));
         }
     }

@@ -986,6 +986,7 @@ MonoBehaviour:
   - {fileID: 491167675}
   - {fileID: 491167674}
   candyVFX: {fileID: 3330180780556025918, guid: f9733db6b78624e43bdf5b974a9e3502, type: 3}
+  isFrozen: 0
 --- !u!50 &491167670
 Rigidbody2D:
   serializedVersion: 4
@@ -2782,7 +2783,7 @@ GameObject:
   - component: {fileID: 1618770309}
   m_Layer: 0
   m_Name: Cursor
-  m_TagString: Untagged
+  m_TagString: Cursor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2971,7 +2972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb60f224186fd46fbabb74e7c102b2f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfx:
+  ropeSfx:
   - {fileID: 1618770312}
   - {fileID: 1618770311}
   - {fileID: 1618770310}
@@ -4045,7 +4046,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2146799802
 MonoBehaviour:
   m_ObjectHideFlags: 0
