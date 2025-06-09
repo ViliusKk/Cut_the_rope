@@ -6,6 +6,11 @@ public class Candy : MonoBehaviour
     public AudioSource spikesfx;
     public AudioSource[] starsfx;
     public GameObject candyVFX;
+    
+    private Rigidbody2D rb;
+    private SpriteRenderer sr;
+    private bool isFrozen = false;
+    private bool hasFrozen = false;
     private int count = 0;
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -29,6 +34,10 @@ public class Candy : MonoBehaviour
             spikesfx.Play();
             Instantiate(candyVFX, transform.position, Quaternion.identity);
             StartCoroutine(DestroyAfterSound());
+        }
+        else if (collision.gameObject.CompareTag("Cursor"))
+        {
+            
         }
     }
     

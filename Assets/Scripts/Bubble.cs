@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Bubble : MonoBehaviour
 {
+    public GameObject popVfx;
     private Rigidbody2D candy;
     private AudioSource sfx;
 
@@ -26,6 +27,7 @@ public class Bubble : MonoBehaviour
         {
             sfx.Play();
             candy.gravityScale = 1;
+            Instantiate(popVfx, transform.position, Quaternion.identity);
             StartCoroutine(DestroyAfterSound());
         }
     }

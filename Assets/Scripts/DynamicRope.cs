@@ -6,7 +6,7 @@ public class DynamicRope : MonoBehaviour
 {
     public Transform candy;
     public GameObject ropeJoint;
-    public float offset = 0.2f;
+    public float offset = 0.1f;
 
     public List<Transform> joints = new();
     void Start()

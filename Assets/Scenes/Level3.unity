@@ -644,6 +644,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8313398022872878056, guid: f865ffcdcae8b46cbba1865bdb0e3dc5, type: 3}
+      propertyPath: m_Size.x
+      value: 1.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 8313398022872878056, guid: f865ffcdcae8b46cbba1865bdb0e3dc5, type: 3}
+      propertyPath: m_Size.y
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8313398022872878056, guid: f865ffcdcae8b46cbba1865bdb0e3dc5, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.12
+      objectReference: {fileID: 0}
     - target: {fileID: 9152609762705251210, guid: f865ffcdcae8b46cbba1865bdb0e3dc5, type: 3}
       propertyPath: m_Name
       value: Trampoline
@@ -2275,6 +2287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spikesfx: {fileID: 1486073493}
+  starsfx: []
   candyVFX: {fileID: 3330180780556025918, guid: f9733db6b78624e43bdf5b974a9e3502, type: 3}
 --- !u!50 &1486073495
 Rigidbody2D:
@@ -2608,6 +2621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb60f224186fd46fbabb74e7c102b2f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sfx: []
 --- !u!1 &1739730456
 GameObject:
   m_ObjectHideFlags: 0
