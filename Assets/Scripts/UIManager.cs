@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,7 +14,13 @@ public class UIManager : MonoBehaviour
     public Sprite starOn;
     public GameObject endLevelScreen;
     
+    AudioSource endScreenSfx;
     private int index = 0;
+
+    private void Start()
+    {
+        endScreenSfx = GetComponent<AudioSource>();
+    }
 
     private void Awake()
     {
@@ -36,6 +43,7 @@ public class UIManager : MonoBehaviour
 
     public void OpenNextLevelScreen()
     {
+        endScreenSfx.Play();
         endLevelScreen.SetActive(true);
     }
 
