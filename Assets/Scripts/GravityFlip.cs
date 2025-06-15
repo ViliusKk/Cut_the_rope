@@ -16,7 +16,7 @@ public class GravityFlip : MonoBehaviour
             Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
-                rb.gravityScale = -Mathf.Abs(rb.gravityScale);
+                rb.gravityScale = -1;
             }
         }
     }
@@ -29,7 +29,7 @@ public class GravityFlip : MonoBehaviour
             Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
-                rb.gravityScale = Mathf.Abs(rb.gravityScale);
+                rb.gravityScale = 1;
             }
         }
     }

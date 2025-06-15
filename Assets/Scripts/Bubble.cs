@@ -31,7 +31,7 @@ public class Bubble : MonoBehaviour
             StartCoroutine(DestroyAfterSound());
         }
     }
-    
+
     IEnumerator DestroyAfterSound()
     {
         yield return new WaitForSeconds(0.02f);
